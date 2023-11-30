@@ -32,13 +32,13 @@ public class substring {
         // Print all substrings of both strings
         System.out.println("Substrings of s1:");
         for (String s : substrings1) {
-            System.out.print(s + " ");
+            System.out.print(s + " | ");
         }
         System.out.println();
 
         System.out.println("Substrings of s2:");
         for (String s : substrings2) {
-            System.out.print(s + " ");
+            System.out.print(s + " | ");
         }
         System.out.println();
 
@@ -47,7 +47,7 @@ public class substring {
         int matchedCount = 0;
         for (String s : substrings1) {
             if (substrings2.contains(s)) {
-                System.out.print(s + " ");
+                System.out.print(s + " | ");
                 matchedCount++;
             }
         }
@@ -55,6 +55,8 @@ public class substring {
 
         return matchedCount; // Return the count of matched substrings
     }
+
+// -------------------------------------------------------------------------------------------------------------------------------------Driver
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
