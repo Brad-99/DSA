@@ -4,29 +4,23 @@ public class LeetcodeBank {
     
     // This method calculates the total money saved
     public static int totalMoney(int n) {
-        // Calculate the number of complete weeks
-        int k = n / 7;
 
-        // Fixed amount saved in the first week
-        int F = 28;
+        int k = n / 7;          // Calculate the number of complete weeks
 
-        // Amount saved in the last complete week
-        int L = 28 + (k - 1) * 7;
+        int F = 28;        // Fixed amount saved in the first week
 
-        // Total amount saved in all complete weeks
-        int arithmeticSum = k * (F + L) / 2;
+        int L = 28 + (k - 1) * 7;        // Amount saved in the last complete week
 
-        // Amount to start with on the Monday of the last (possibly incomplete) week
-        int monday = 1 + k;
+        int arithmeticSum = k * (F + L) / 2;        // Total amount saved in all full weeks
 
-        // Amount saved in the last incomplete week
-        int finalWeek = 0;
+        int monday = 1 + k;            // Amount to start with on the Monday of the last (possibly incomplete) week
+
+        int finalWeek = 0;              // Amount saved in the last incomplete week
         for (int day = 0; day < n % 7; day++) {
             finalWeek += monday + day;
         }
 
-        // Total amount saved
-        return arithmeticSum + finalWeek;
+        return arithmeticSum + finalWeek;        // Total amount saved
     }
 
     // Main method to run the program
