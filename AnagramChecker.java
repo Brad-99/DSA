@@ -31,7 +31,7 @@ public class AnagramChecker {
 
     public static void main(String[] args) {
         // Example usage
-        String s1 = "anagram";
+        String s1 = "tanagram";
         String t1 = "nagaram";
         System.out.println(isAnagram(s1, t1)); // Output: true
 
