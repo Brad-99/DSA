@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+// Anagram means exact the same charaters but in different orders
+
 public class AnagramChecker {
     public static boolean isAnagram(String s, String t) {
         // Check if lengths are different, if yes, they can't be anagrams
@@ -36,7 +38,11 @@ public class AnagramChecker {
         System.out.println(isAnagram(s1, t1)); // Output: true
 
         String s2 = "rat";
-        String t2 = "car";
+        String t2 = "tar";
         System.out.println(isAnagram(s2, t2)); // Output: false
+
+        String s3 = "bro";
+        String t3 = "bra";
+        System.out.println(isAnagram(s3, t3)); // Output: false
     }
 }
