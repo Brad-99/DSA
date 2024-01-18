@@ -35,7 +35,7 @@ public class AnagramChecker {
         String t1 = "tnagaram";
         System.out.println(isAnagram(s1, t1)); // Output: true
 
-        String s2 = "rat";
+        String s2 = "trat";
         String t2 = "car";
         System.out.println(isAnagram(s2, t2)); // Output: false
     }
