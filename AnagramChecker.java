@@ -31,11 +31,11 @@ public class AnagramChecker {
 
     public static void main(String[] args) {
         // Example usage
-        String s1 = "tanagram";
-        String t1 = "tnagaram";
+        String s1 = "anagram";
+        String t1 = "nagaram";
         System.out.println(isAnagram(s1, t1)); // Output: true
 
-        String s2 = "trat";
+        String s2 = "rat";
         String t2 = "car";
         System.out.println(isAnagram(s2, t2)); // Output: false
     }
