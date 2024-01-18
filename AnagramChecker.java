@@ -32,7 +32,7 @@ public class AnagramChecker {
     public static void main(String[] args) {
         // Example usage
         String s1 = "tanagram";
-        String t1 = "nagaram";
+        String t1 = "tnagaram";
         System.out.println(isAnagram(s1, t1)); // Output: true
 
         String s2 = "rat";
