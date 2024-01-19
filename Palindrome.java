@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Solution {
+class Palindrome {
     public boolean isPalindrome(String s) {
         // Convert the string to lowercase and remove non-alphanumeric characters
         s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
@@ -28,7 +28,7 @@ class Solution {
         String input = scanner.nextLine();
 
         // Create an instance of the Solution class
-        Solution solution = new Solution();
+        Palindrome solution = new Palindrome();
 
         // Check if the input string is a palindrome
         boolean result = solution.isPalindrome(input);
