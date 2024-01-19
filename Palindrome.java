@@ -35,5 +35,6 @@ class Solution {
 
         // Display the result
         System.out.println("Output: " + result);
+        System.out.println("Good day");
     }
 }
