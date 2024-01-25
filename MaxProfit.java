@@ -1,27 +1,45 @@
+import java.util.Scanner;
+
 public class MaxProfit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter the number of days: ");
+        int n = scanner.nextInt();
+
+        int[] prices = new int[n];
+
+        System.out.println("Enter the stock prices for each day:");
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Day " + (i + 1) + ": ");
+            prices[i] = scanner.nextInt();
+        }
+
+        Solution solution = new Solution();
+        int result = solution.maxProfit(prices);
+
+        System.out.println("The maximum profit is: " + result);
+
+        scanner.close();
+    }
+}
+
+class Solution {
     public int maxProfit(int[] prices) {
-        int minPrice = Integer.MAX_VALUE; // Initialize minPrice to a very large value
-        int maxProfit = 0; // Initialize maxProfit to 0
+        if (prices == null || prices.length <= 1) {
+            return 0;
+        }
 
-        for (int price : prices) {
-            // Update minPrice to the current price if it is lower
-            minPrice = Math.min(minPrice, price);
+        int minPrice = prices[0];
+        int maxProfit = 0;
 
-            // Update maxProfit if selling at the current price gives a higher profit
-            maxProfit = Math.max(maxProfit, price - minPrice);
+        for (int i = 1; i < prices.length; i++) {
+            minPrice = Math.min(minPrice, prices[i]);
+            int potentialProfit = prices[i] - minPrice;
+            maxProfit = Math.max(maxProfit, potentialProfit);
         }
 
         return maxProfit;
-    }
-
-    public static void main(String[] args) {
-        MaxProfit solution = new MaxProfit();
-
-        int[] prices1 = { 7, 1, 5, 3, 6, 4 };
-        System.out.println(solution.maxProfit(prices1)); // Output: 5
-
-        int[] prices2 = { 7, 6, 4, 3, 1 };
-        System.out.println(solution.maxProfit(prices2)); // Output: 0
     }
 }

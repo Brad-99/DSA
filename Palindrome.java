@@ -1,7 +1,7 @@
 import java.util.Scanner; // Importing a tool to help us get input from the user
 
 class Solution {
-    public boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
         // Convert the string to lowercase and remove non-alphanumeric characters
         s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
 
@@ -35,6 +35,6 @@ class Solution {
 
         // Display the result
         System.out.println("Output: " + result);
-        System.out.println("Good day");
+        System.out.println("Palindrome");
     }
 }
