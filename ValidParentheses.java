@@ -1,26 +1,39 @@
+import java.util.Scanner;
 import java.util.Stack;
 
 public class ValidParentheses {
-    public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<Character>(); // create an empty stack
-        for (char c : s.toCharArray()) { // loop through each character in the string
-            if (c == '(') // if the character is an opening parenthesis
-                stack.push(')'); // push the corresponding closing parenthesis onto the stack
-            else if (c == '{') // if the character is an opening brace
-                stack.push('}'); // push the corresponding closing brace onto the stack
-            else if (c == '[') // if the character is an opening bracket
-                stack.push(']'); // push the corresponding closing bracket onto the stack
-            else if (stack.isEmpty() || stack.pop() != c) // if the character is a closing bracket
-                // if the stack is empty (i.e., there is no matching opening bracket) or the top
-                // of the stack
-                // does not match the closing bracket, the string is not valid, so return false
-                return false;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a string containing parentheses:");
+        String input = scanner.nextLine();
+
+        boolean isValid = isValidParentheses(input);
+
+        if (isValid) {
+            System.out.println("The input string has valid parentheses.");
+        } else {
+            System.out.println("The input string does not have valid parentheses.");
         }
-        // if the stack is empty, all opening brackets have been matched with their
-        // corresponding closing brackets,
-        // so the string is valid, otherwise, there are unmatched opening brackets, so
-        // return false
-        return stack.isEmpty();
+
+        scanner.close();
     }
 
+    public static boolean isValidParentheses(String s) {
+        Stack<Character> stack = new Stack<Character>();
+
+        for (char c : s.toCharArray()) {
+            if (c == '(')
+                stack.push(')');
+            else if (c == '{')
+                stack.push('}');
+            else if (c == '[')
+                stack.push(']');
+            else if (stack.isEmpty() || stack.pop() != c)
+                return false;
+        }
+
+        return stack.isEmpty();
+    }
 }
