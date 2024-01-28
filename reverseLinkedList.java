@@ -21,18 +21,7 @@ public class reverseLinkedList {
         ListNode head = null;
         ListNode tail = null;
 
-        for (int i = 0; i < n; i++) {
-            int value = scanner.nextInt();
-            ListNode newNode = new ListNode(value);
 
-            if (head == null) {
-                head = newNode;
-                tail = newNode;
-            } else {
-                tail.next = newNode;
-                tail = newNode;
-            }
-        }
 
         // Reversing the linked list
         ListNode reversedList = reverseList(head);
