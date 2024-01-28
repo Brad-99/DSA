@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class ListNode {
-    int val, pup;
+    int val;
     ListNode next;
 
     ListNode(int val) {
