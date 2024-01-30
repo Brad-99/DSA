@@ -12,7 +12,7 @@ class ListNode {
 }
 
 // Class to reverse a linked list
-public class ReverseLinkedList {
+public class reverseLinkedList {
 
     // Function to reverse a linked list and return the new head
     public static ListNode reverseList(ListNode head) {
