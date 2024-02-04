@@ -20,7 +20,7 @@ public class reverseLinkedList {
         ListNode current = head; // Reference to the current node
 
         // Traverse the linked list
-        while (current != null) {
+        while (current != null) { // While the loop haven't reached the end
             ListNode next = current.next; // Save the reference to the next node
             current.next = prev; // Reverse the link to the previous node
             prev = current; // Move the previous pointer to the current node
