@@ -2,8 +2,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
-public class GroupAnagrams {
+public class GroupAnagramsInput {
     // This is where the main work happens
     public static List<List<String>> groupAnagrams(String[] strs) {
         // We create a special box (HashMap) to keep our words organized
@@ -39,27 +40,23 @@ public class GroupAnagrams {
 
     // This is like a demonstration to show how the main function works
     public static void main(String[] args) {
-        // Example 1
-        String[] input1 = { "eat", "tea", "tan", "ate", "nat", "bat" };
-        List<List<String>> output1 = groupAnagrams(input1);
-        System.out.println("Example 1:");
-        System.out.println("Input: " + Arrays.toString(input1));
-        System.out.println("Output: " + output1);
+        Scanner scanner = new Scanner(System.in);
 
-        // Example 2
-        String[] input2 = { "" };
-        List<List<String>> output2 = groupAnagrams(input2);
-        System.out.println("\nExample 2:");
-        System.out.println("Input: " + Arrays.toString(input2));
-        System.out.println("Output: " + output2);
+        System.out.println("Enter words separated by spaces:");
+        String inputString = scanner.nextLine();
 
-        // Example 3
-        String[] input3 = { "a" };
-        List<List<String>> output3 = groupAnagrams(input3);
-        System.out.println("\nExample 3:");
-        System.out.println("Input: " + Arrays.toString(input3));
-        System.out.println("Output: " + output3);
+        // Split the user input into an array of words
+        String[] inputWords = inputString.split("\\s+");
 
-        
+        // Call the groupAnagrams function with user input
+        List<List<String>> output = groupAnagrams(inputWords);
+
+        // Display the results
+        System.out.println("\nUser Input Demo:");
+        System.out.println("Input: " + Arrays.toString(inputWords));
+        System.out.println("Output: " + output);
+
+        // Close the scanner to avoid resource leaks
+        scanner.close();
     }
 }
