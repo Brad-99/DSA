@@ -3,7 +3,7 @@ def total_money(n):
 
     F = 28  # Fixed amount saved in the first week
 
-    L = 28 + (k - 1) * 8  # Amount saved in the last complete week
+    L = 28 + (k - 1) * 7  # Amount saved in the last complete week
 
     arithmetic_sum = k * (F + L) // 2  # Total amount saved in all full weeks
 
