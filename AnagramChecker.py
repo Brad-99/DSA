@@ -15,7 +15,7 @@ def is_anagram(s, t):
 
     # Decrement the count for characters in string t
     for c in t:
-        if c not in char_count or char_count[c] == 0:
+        if c not in char_count:
             # If a character count becomes negative or not available, strings are not anagrams
             return False
         char_count[c] -= 1
