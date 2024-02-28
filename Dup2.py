@@ -9,7 +9,7 @@ class solution:
                 return True
             else:
                 unique_set.add(num)
-        # If loop complete without True
+        # If loop complete without True then it'll return false
         return False
         
 
