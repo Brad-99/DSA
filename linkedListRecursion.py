@@ -18,7 +18,7 @@ def push(head, new_data):
     # Update the head to be the new node.
     head = new_node
 
-    # Return the updated list head
+    # Return the updated list head.
     return head
 
 # Method to count the occurrences of a specific value in the list
