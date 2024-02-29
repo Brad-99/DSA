@@ -15,7 +15,7 @@ def push(head, new_data):
     # Link the new node to the current head of the list
     new_node.next = head
 
-    # Update the head to be the new node
+    # Update the head to be the new node.
     head = new_node
 
     # Return the updated list head
