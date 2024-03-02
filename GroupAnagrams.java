@@ -39,7 +39,7 @@ public class GroupAnagrams {
 
     // This is like a demonstration to show how the main function works
     public static void main(String[] args) {
-        // Example 11
+        // Example 1
         String[] input1 = { "eat", "tea", "tan", "ate", "nat", "bat" };
         List<List<String>> output1 = groupAnagrams(input1);
         System.out.println("Example 1:");
