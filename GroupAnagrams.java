@@ -46,7 +46,7 @@ public class GroupAnagrams {
         System.out.println("Input: " + Arrays.toString(input1));
         System.out.println("Output: " + output1);
 
-        // Example 2
+        // Example 23
         String[] input2 = { "" };
         List<List<String>> output2 = groupAnagrams(input2);
         System.out.println("\nExample 2:");
