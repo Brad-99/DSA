@@ -59,7 +59,7 @@ if __name__ == "__main__":
     # Building the binary tree
     root = build_tree(nodes)
     
-    # Finding the root-to-leaf paths
+    # Finding the root-to-leaf path
     solution = Solution()
     paths = solution.binaryTreePaths(root)
     
