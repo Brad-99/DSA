@@ -23,7 +23,7 @@ public class LeetcodeBank {
         return arithmeticSum + finalWeek;        // Total amount saved
     }
 
-    // Main method to run the program
+    // Main method to run the programm
     public static void main(String[] args) {
         // Create a Scanner object for input
         Scanner scanner = new Scanner(System.in);
